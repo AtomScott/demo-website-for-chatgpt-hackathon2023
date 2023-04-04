@@ -1,83 +1,195 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="script.js" defer></script>
-  <title>ChatGPTハッカソン in 東京</title>
-</head>
-
-<body class="bg-gradient">
-  <header class="container-fluid text-white text-center py-5">
-    <h1 class="display-4">AIの未来を
-
-創造しよう！ChatGPTハッカソン in 東京</h1>
-
-  </header>
-  <main class="container mt-5">
-    <div class="row">
-      <div class="col-lg-6 col-md-12">
-        <section>
-          <h2>開催時期</h2>
-          <p>4月29日～30日, 5月6日～7日</p>
-        </section>
-        <section>
-          <h2>テーマ</h2>
-          <p>あなたの革新的なアイデアでChatGPTを進化させよう！</p>
-        </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <title>ChatGPTハッカソン in 東京</title>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+      <div
+        class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"
+      >
+        <div class="pl-4 flex items-center">
+          <a
+            class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+            href="#"
+          >
+            <!--Icon from: http://www.potlabicons.com/ -->
+            ChatGPTハッカソン
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button
+            id="nav-toggle"
+            class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          ></button>
+        </div>
+        <div
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+          id="nav-content"
+        >
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a
+                class="inline-block py-2 px-4 text-black font-bold no-underline"
+                href="#about"
+              >
+                About
+              </a>
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#schedule"
+              >
+                Schedule
+              </a>
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#registration"
+              >
+                Registration
+              </a>
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="#mentors"
+              >
+                Mentors
+              </a>
+            </li>
+          </ul>
+          <a
+            href="https://your_google_form_link_here"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              id="navAction"
+              class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+            >
+              Sign Up
+            </button>
+          </a>
+        </div>
       </div>
-      <div class="col-lg-6 col-md-12">
-        <section>
-          <h2>参加者</h2>
-          <p>コーディング経験があった方が嬉しい。最大人数：東京の会場次第</p>
-        </section>
-        <section>
-          <h2>場所</h2>
-          <p>オフライン：東京</p>
-          <p>ハイブリッド：チーム内の少数がオンライン、１日だけどうしてもオフライン参
+      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+    <!--Hero-->
+    <!--Hero-->
+    <div class="pt-24">
+      <div
+        class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center"
+      >
+        <!--Left Col-->
+        <div
+          class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left"
+        >
+          <p class="uppercase tracking-loose w-full">
+            ChatGPTハッカソン in 東京
+          </p>
+          <h1 class="my-4 text-5xl font-bold leading-tight">
+            Unleash the Power of AI in Your Projects
+          </h1>
+          <p class="leading-normal text-2xl mb-8">
+            Join us for an exciting hackathon event to explore the possibilities
+            of ChatGPT and create innovative solutions.
+          </p>
+          <a
+            href="https://your_google_form_link_here"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+            >
+              Sign Up
+            </button>
+          </a>
+        </div>
+        <!--Right Col-->
+        <div class="w-full md:w-3/5 py-6 text-center">
+          <img
+            class="w-full md:w-4/5 z-50"
+            src="https://source.unsplash.com/random/800x600"
+            alt="ChatGPT Hackathon"
+          />
+        </div>
+      </div>
+    </div>
 
+    <main class="container mx-auto">
+      <section class="h-screen-80">...</section>
+      <!-- About the Hackathon -->
+      <section class="bg-purple-200 py-12">
+        <div class="container mx-auto px-4">
+          <div class="text-center">
+            <h2 class="text-4xl font-bold mb-8">About the Hackathon</h2>
+            <p class="text-xl">
+              The ChatGPT Hackathon in Tokyo is a two-day event focused on
+              exploring the possibilities of ChatGPT and creating innovative
+              solutions. Participants will have the opportunity to work on
+              creative side projects, tackle innovative challenges, build
+              intellectual chatbots, and create captivating generative art
+              pieces. Join us to shape the future of AI!
+            </p>
+          </div>
+        </div>
+      </section>
 
-加できないなどはOK</p>
-</section>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-4 col-md-12">
-<section>
-<h2>メンター</h2>
-<p>なるべく強い国内にいる人</p>
-</section>
-</div>
-<div class="col-lg-4 col-md-12">
-<section>
-<h2>基調講演</h2>
-<p>スタート時に基調講演があってもいい</p>
-</section>
-</div>
-<div class="col-lg-4 col-md-12">
-<section>
-<h2>参加費</h2>
-<p>基本的に無料、会場代とか必要あれば</p>
-</section>
-</div>
-</div>
-<section class="mt-5">
-<h2>参加登録</h2>
-<p>参加登録は<a href="https://docs.google.com/forms/path_to_your_form" target="_blank">こちらのGoogleフォーム</a>からお願いします。</p>
+      <!-- Schedule -->
+      <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+          <div class="text-center">
+            <h2 class="text-4xl font-bold mb-8">Schedule</h2>
+            <p class="text-xl">
+              The event will take place on a weekend in late April or early May.
+              The registration deadline is two weeks before the event. More
+              detailed information about the schedule will be available soon.
+            </p>
+          </div>
+        </div>
+      </section>
 
+      <!-- Mentors & Speakers -->
+      <section class="bg-purple-100 py-12">
+        <div class="container mx-auto px-4">
+          <div class="text-center">
+            <h2 class="text-4xl font-bold mb-8">Mentors & Speakers</h2>
+            <p class="text-xl">
+              We are working on assembling an outstanding lineup of mentors and
+              speakers for the ChatGPT Hackathon. These experts will guide and
+              inspire participants throughout the event. Stay tuned for more
+              information on our mentors and speakers!
+            </p>
+          </div>
+        </div>
+      </section>
 
-
-
-</section>
-  </main>
-  <footer>
-    <p>&copy; 2023 ChatGPTハッカソン in 東京. All rights reserved.</p>
-
-  </footer>
-</body>
+      <section class="bg-white py-12">...</section>
+    </main>
+    <footer class="bg-purple-600 text-white py-8">...</footer>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
