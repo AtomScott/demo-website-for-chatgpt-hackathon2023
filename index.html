@@ -18,10 +18,30 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5w2p5z+8zr5d5f1J5U6Ixt4j8U2Q4U+9cuEnJoa3"
+      crossorigin="anonymous"
+    />
+
     <title>ChatGPTハッカソン in 東京</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-gray-100 font-sans">
-    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+  <body
+    class="bg-gray-100 font-sans"
+    style="background-color: var(--primary-bg)"
+  >
+    <nav
+      id="header"
+      class="fixed w-full z-30 top-0"
+      style="background-color: var(--primary-bg)"
+    >
       <div
         class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"
       >
@@ -30,52 +50,49 @@
             class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
             href="#"
           >
-            <!--Icon from: http://www.potlabicons.com/ -->
             ChatGPTハッカソン
           </a>
         </div>
         <div class="block lg:hidden pr-4">
           <button
             id="nav-toggle"
-            class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          ></button>
+            class="flex items-center p-1 text-white hover:text-white focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          >
+            <!-- Insert the hamburger menu icon here -->
+          </button>
         </div>
         <div
-          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-primary lg:bg-transparent text-white p-4 lg:p-0 z-20"
           id="nav-content"
         >
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
               <a
-                class="inline-block py-2 px-4 text-black font-bold no-underline"
+                class="inline-block py-2 px-4 text-white font-bold no-underline"
                 href="#about"
+                >About</a
               >
-                About
-              </a>
             </li>
             <li class="mr-3">
               <a
-                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
                 href="#schedule"
+                >Schedule</a
               >
-                Schedule
-              </a>
             </li>
             <li class="mr-3">
               <a
-                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
                 href="#registration"
+                >Registration</a
               >
-                Registration
-              </a>
             </li>
             <li class="mr-3">
               <a
-                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
                 href="#mentors"
+                >Mentors</a
               >
-                Mentors
-              </a>
             </li>
           </ul>
           <a
@@ -85,7 +102,7 @@
           >
             <button
               id="navAction"
-              class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+              class="mx-auto lg:mx-0 hover:underline bg-white text-primary font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
             >
               Sign Up
             </button>
@@ -95,22 +112,31 @@
       <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
     </nav>
     <!--Hero-->
-    <!--Hero-->
     <div class="pt-24">
       <div
         class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center"
+        style="background-color: var(--primary-bg)"
       >
         <!--Left Col-->
         <div
           class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left"
         >
-          <p class="uppercase tracking-loose w-full">
+          <p
+            class="uppercase tracking-loose w-full"
+            style="color: var(--secondary-text)"
+          >
             ChatGPTハッカソン in 東京
           </p>
-          <h1 class="my-4 text-5xl font-bold leading-tight">
+          <h1
+            class="my-4 text-5xl font-bold leading-tight"
+            style="color: var(--primary-text)"
+          >
             Unleash the Power of AI in Your Projects
           </h1>
-          <p class="leading-normal text-2xl mb-8">
+          <p
+            class="leading-normal text-2xl mb-8"
+            style="color: var(--primary-text)"
+          >
             Join us for an exciting hackathon event to explore the possibilities
             of ChatGPT and create innovative solutions.
           </p>
@@ -120,7 +146,7 @@
             rel="noopener noreferrer"
           >
             <button
-              class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+              class="mx-auto lg:mx-0 hover:underline bg-white text-primary font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
             >
               Sign Up
             </button>
@@ -136,22 +162,90 @@
         </div>
       </div>
     </div>
-
     <main class="container mx-auto">
-      <section class="h-screen-80">...</section>
       <!-- About the Hackathon -->
-      <section class="bg-purple-200 py-12">
+      <section
+        class="relative bg-cover bg-center py-12"
+        style="background-image: url('https://source.unsplash.com/random')"
+      >
+        <div
+          class="absolute inset-0"
+          style="background-color: var(--overlay-bg)"
+        ></div>
         <div class="container mx-auto px-4">
-          <div class="text-center">
-            <h2 class="text-4xl font-bold mb-8">About the Hackathon</h2>
-            <p class="text-xl">
-              The ChatGPT Hackathon in Tokyo is a two-day event focused on
-              exploring the possibilities of ChatGPT and creating innovative
-              solutions. Participants will have the opportunity to work on
-              creative side projects, tackle innovative challenges, build
-              intellectual chatbots, and create captivating generative art
-              pieces. Join us to shape the future of AI!
-            </p>
+          <div
+            class="relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left"
+          >
+            <!-- Left column - Carousel -->
+            <div
+              class="w-full h-64 md:h-auto overflow-hidden rounded shadow-md"
+              data-aos="fade-right"
+            >
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      class="w-full h-full object-cover object-center"
+                      src="https://source.unsplash.com/random"
+                      alt="About the Hackathon Image 1"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="w-full h-full object-cover object-center"
+                      src="https://source.unsplash.com/random"
+                      alt="About the Hackathon Image 2"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="w-full h-full object-cover object-center"
+                      src="https://source.unsplash.com/random"
+                      alt="About the Hackathon Image 3"
+                    />
+                  </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+            <!-- Right column - Details -->
+            <div style="color: var(--primary-text)">
+              <h2 class="text-4xl font-bold mb-8">About the Hackathon</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                <div class="flex items-center">
+                  <i class="fas fa-calendar text-2xl mr-4"></i>
+                  <p class="text-xl">June 17-18, 2023</p>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-map-marker-alt text-2xl mr-4"></i>
+                  <p class="text-xl">Tokyo, Japan</p>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-users text-2xl mr-4"></i>
+                  <p class="text-xl">100+ Participants</p>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-trophy text-2xl mr-4"></i>
+                  <p class="text-xl">Exciting Prizes</p>
+                </div>
+              </div>
+
+              <p class="text-lg mb-4">
+                Join us for an exciting two-day hackathon focused on ChatGPT and
+                AI. Collaborate with fellow developers, designers, and data
+                scientists to create innovative projects and compete for amazing
+                prizes!
+              </p>
+              <button
+                class="bg-white text-purple-900 font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+              >
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -184,12 +278,118 @@
           </div>
         </div>
       </section>
-
-      <section class="bg-white py-12">...</section>
+      <!-- Location -->
+      <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left"
+          >
+            <!-- Left column - Location -->
+            <div class="text-black">
+              <h2 class="text-4xl font-bold mb-8">Location</h2>
+              <p class="text-xl">Tokyo University</p>
+              <p class="text-xl">7-3-1 Hongo, Bunkyo City</p>
+              <p class="text-xl">Tokyo 113-8654, Japan</p>
+            </div>
+            <!-- Right column - Google Maps Embed -->
+            <div class="w-full h-64 md:h-auto relative">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.471453041328!2d139.7592052655189!3d35.7146221801865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c2ffa206ea3%3A0x30e407498313ba95!2sThe%20University%20of%20Tokyo!5e0!3m2!1sen!2smy!4v1680657354491!5m2!1sen!2smy"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="bg-purple-600 text-white py-8">...</footer>
+    <!--Footer-->
+    <footer
+      class="w-full bg-gray-200 border-t border-gray-400 py-8"
+      style="background-color: var(--primary-bg)"
+    >
+      <div class="container mx-auto px-8">
+        <div class="w-full flex flex-col md:flex-row py-6">
+          <div class="flex-1 mb-6 md:mb-0">
+            <a
+              class="text-3xl font-bold mb-2"
+              href="#"
+              style="color: var(--primary-text)"
+            >
+              ChatGPTハッカソン
+            </a>
+            <p class="mb-4 text-gray-800" style="color: var(--secondary-text)">
+              A hackathon event focusing on the creative use of ChatGPT
+              technology in various projects.
+            </p>
+            <p class="text-gray-800" style="color: var(--secondary-text)">
+              &copy; 2023 ChatGPT Hackathon. All rights reserved.
+            </p>
+          </div>
+          <div class="flex-1">
+            <p
+              class="uppercase text-gray-800 font-bold mb-2"
+              style="color: var(--primary-text)"
+            >
+              Useful Links
+            </p>
+            <ul class="list-reset mb-6">
+              <li class="mt-2">
+                <a
+                  href="#about"
+                  class="text-gray-800 hover:text-gray-900"
+                  style="color: var(--secondary-text)"
+                  >About</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#schedule"
+                  class="text-gray-800 hover:text-gray-900"
+                  style="color: var(--secondary-text)"
+                  >Schedule</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#registration"
+                  class="text-gray-800 hover:text-gray-900"
+                  style="color: var(--secondary-text)"
+                  >Registration</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#mentors"
+                  class="text-gray-800 hover:text-gray-900"
+                  style="color: var(--secondary-text)"
+                  >Mentors</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script>
       AOS.init();
+    </script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 3000,
+        },
+        loop: true,
+      });
     </script>
   </body>
 </html>

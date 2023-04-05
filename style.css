@@ -1,21 +1,10 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #3f51b5;
-    color: white;
-    padding: 1rem;
-}
-
-nav {
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem 0;
-}
-
-nav a {
-    color: #3
+:root {
+    --primary-bg: #0E0429;
+    --blue: #09B4DF;
+    --dark-blue: #1C73CB;
+    --dark-violet: #2E1F66;
+    --red: #E6514F;
+    --light-gray: #F0F4F8;
+    --dark-gray: #3D405B;
+  }
+  
