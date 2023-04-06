@@ -137,6 +137,23 @@
   color: transparent;
 }
 
+.gradient-text-link {
+  background-image: linear-gradient(
+    45deg,
+    var(--gradient-text-1) 00%,
+    var(--gradient-text-2) 50%,
+    var(--gradient-text-3) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: color 0.3s ease;
+}
+
+.gradient-text-link:hover {
+  color: rgba(255, 255, 255, 0.5)
+}
+
 
 body {
   background: linear-gradient(to bottom, var(--fade-from-color), var(--fade-mid-color), var(--fade-to-color));
