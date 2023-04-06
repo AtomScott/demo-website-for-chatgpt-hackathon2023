@@ -8,7 +8,7 @@
   --dark-gray: #3D405B;
   --footer-text: #e0e0e0;
   --gradient-color-1: #261a44;
-  --gradient-color-2: #53438e;
+  --gradient-color-2: #8a438e;
   --gradient-color-3: #1c73cb;
   --gradient-color-4: #09b4df;
   --transparent: rgba(0, 0, 0, 0);
@@ -21,53 +21,105 @@
   --gradient-text-4: #ca4dff;
 }
 
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+.gradient-container {
+  position: relative;
 }
 
-.gradient-text {
-  background-image: linear-gradient(45deg, var(--gradient-text-1), var(--gradient-text-2), var(--gradient-text-3), var(--gradient-text-4));
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.gradient-text-link {
-  background-image: linear-gradient(
-    45deg,
-    var(--gradient-color-1) 0%,
-    var(--gradient-color-2) 50%,
-    var(--gradient-color-3) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  transition: color 0.3s ease;
-}
-
-
-#gradient-canvas {
+.gradient-canvas {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
   width: 100%;
   height: 2000px;
-  opacity: 0.25;
-  background: linear-gradient(135deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3), var(--gradient-color-4));
   background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
+  z-index: -1;
 }
 
+#gradient-canvas1 {
+  background: linear-gradient(
+    135deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2),
+    var(--gradient-color-3),
+    var(--gradient-color-4)
+  );
+  animation: gradientBG1 10s ease infinite, fade 5s ease-in-out infinite;
+}
+
+#gradient-canvas2 {
+  background: radial-gradient(
+    circle at center,
+    var(--gradient-color-1),
+    var(--gradient-color-2),
+    var(--gradient-color-3),
+    var(--gradient-color-4)
+  );
+  background-size: 100% 100%;
+  animation: gradientBG2 15s ease infinite, fade 6s ease-in-out infinite;
+}
+
+#gradient-canvas3 {
+  background: linear-gradient(
+    45deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2),
+    var(--gradient-color-3),
+    var(--gradient-color-4)
+  );
+  animation: gradientBG3 5s ease infinite, fade 7s ease-in-out infinite;
+}
+
+#gradient-canvas3 {
+  background: radial-gradient(
+    circle at top right,
+    var(--gradient-color-1),
+    var(--gradient-color-2),
+    var(--gradient-color-3),
+    var(--gradient-color-4)
+  );
+  animation: gradientBG3 4s ease infinite, fade 10s ease-in-out infinite;
+}
+
+
+@keyframes gradientBG1 {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradientBG2 {
+  0%,
+  100% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+}
+
+@keyframes gradientBG3 {
+  0%,
+  100% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 
 #gradient-fade {
   position: absolute;
@@ -78,6 +130,13 @@
   height: 2000px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 99%);
 }
+
+.gradient-text {
+  background-image: linear-gradient(45deg, var(--gradient-text-1), var(--gradient-text-2), var(--gradient-text-3), var(--gradient-text-4));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 
 body {
   background: linear-gradient(to bottom, var(--fade-from-color), var(--fade-mid-color), var(--fade-to-color));
