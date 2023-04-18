@@ -1,477 +1,305 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5w2p5z+8zr5d5f1J5U6Ixt4j8U2Q4U+9cuEnJoa3"
-      crossorigin="anonymous"
-    />
 
-    <title>ChatGPTハッカソン in 東京</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5w2p5z+8zr5d5f1J5U6Ixt4j8U2Q4U+9cuEnJoa3" crossorigin="anonymous" />
 
-  <body class="bg-gray-100 font-sans text-white">
-    <div class="gradient-canvas" id="gradient-canvas1"></div>
-    <div class="gradient-canvas" id="gradient-canvas2"></div>
-    <div class="gradient-canvas" id="gradient-canvas3"></div>
-    <div class="gradient-canvas" id="gradient-canvas4"></div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <div id="gradient-fade"></div>
-    <nav id="header" class="fixed w-full z-30 top-0">
+  <title>HackGPT Tokyo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+
+    body {
+      font-family: "Noto Sans JP", sans-serif;
+    }
+
+    h1,
+    h2, h3 {
+      font-family: "DotGothic16", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-white">
+  <div class="gradient-canvas" id="gradient-canvas1"></div>
+  <div class="gradient-canvas" id="gradient-canvas2"></div>
+  <div class="gradient-canvas" id="gradient-canvas3"></div>
+  <div class="gradient-canvas" id="gradient-canvas4"></div>
+
+  <div id="gradient-fade"></div>
+  <nav id="header" class="fixed w-full z-30 top-0">
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between px-4 py-2">
+      <div class="flex items-center">
+        <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+          <img src="images/title.svg" alt="HackGPT Tokyo" class="logo-image w-28 md:w-48 lg:w-64" />
+        </a>
+      </div>
+      <div class="block lg:hidden pr-4">
+        <button id="nav-toggle"
+          class="flex items-center p-1 text-white focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          <svg class="fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
       <div
-        class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"
-      >
-        <div class="pl-4 flex items-center">
-          <a
-            class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-            href="#"
-          >
-            ChatGPTハッカソン
-          </a>
-        </div>
-        <div class="block lg:hidden pr-4">
-          <button
-            id="nav-toggle"
-            class="flex items-center p-1 text-white hover:text-white focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          >
-            <!-- Insert the hamburger menu icon here -->
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-primary lg:bg-transparent text-white p-4 lg:p-0 z-20"
+        id="nav-content">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-white font-semibold text-lg no-underline hover:text-gray-300"
+              href="#about">About</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-white font-semibold text-lg no-underline hover:text-gray-300"
+              href="#schedule">Schedule</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-white font-semibold text-lg no-underline hover:text-gray-300"
+              href="#mentors">Mentors</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-white font-semibold text-lg no-underline hover:text-gray-300"
+              href="#location">Location</a>
+          </li>
+        </ul>
+        <a href="https://your_google_form_link_here" target="_blank" rel="noopener noreferrer">
+          <button id="navAction"
+            class="mx-auto lg:mx-0 hover:underline bg-white hover:text-gray-900 text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out hover:bg-opacity-100">
+            参加登録
           </button>
-        </div>
-        <div
-          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-primary lg:bg-transparent text-white p-4 lg:p-0 z-20"
-          id="nav-content"
-        >
-          <ul class="list-reset lg:flex justify-end flex-1 items-center">
-            <li class="mr-3">
-              <a
-                class="inline-block py-2 px-4 text-white font-bold no-underline"
-                href="#about"
-                >About</a
-              >
-            </li>
-            <li class="mr-3">
-              <a
-                class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                href="#schedule"
-                >Schedule</a
-              >
-            </li>
-            <li class="mr-3">
-              <a
-                class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                href="#location"
-                >Location</a
-              >
-            </li>
-            <li class="mr-3">
-              <a
-                class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                href="#mentors"
-                >Mentors</a
-              >
-            </li>
-          </ul>
-          <a
-            href="https://your_google_form_link_here"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button
-              id="navAction"
-              class="mx-auto lg:mx-0 hover:underline bg-white text-primary font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-            >
-              Sign Up
-            </button>
+        </a>
+      </div>
+    </div>
+    <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+  </nav>
+  <!--Hero-->
+  <div class="pt-24">
+    <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      <!--Left Col-->
+      <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+        <h1 class="my-4 text-5xl font-bold leading-tight gradient-text">
+          <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+            <img src="images/title.svg" alt="HackGPT Tokyo" class="logo-image w-28 md:w-48 lg:w-64" />
           </a>
+        </h1>
+        <h2 class="leading-normal text-xl text-white mb-4">オフライン開催 / 2023年5月6日-7日</h2>
+        <h2 class="leading-normal text-xl text-white mb-4">開催まで<span id="countdown" class="font-bold">00日
+            00:00:00</span></h2>
+
+        </h2>
+        <a href="#"
+          target="https://docs.google.com/forms/d/e/1FAIpQLSdSo2Bb-tka5Va_BT9mlzH9ChH6jUotdCvs6Hqxy5jRI4V4rw/viewform"
+          rel="noopener noreferrer">
+          <button
+            class="text-xl mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            参加登録
+          </button>
+        </a>
+      </div>
+      <!--Right Col-->
+      <div class="w-full md:w-3/5 py-6 text-center">
+        <img class="w-full md:w-4/5 mx-auto z-50" src="./images/hero.png" alt="ChatGPT Hackathon" />
+      </div>
+    </div>
+  </div>
+  <main class="container mx-auto">
+    <!-- ハッカソンについて -->
+    <section id="about" class="relative bg-cover bg-center py-12">
+      <div class="absolute inset-0"></div>
+      <div class="container mx-auto px-4">
+        <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left">
+          <!-- 左カラム - 画像 -->
+          <div class="w-full h-64 md:h-auto">
+            <img class="w-full h-full object-cover object-center" src="./images/about-1.png" alt="ハッカソンの画像" />
+          </div>
+
+          <!-- 右カラム - 詳細 -->
+          <div class="text-white">
+            <h2
+              class="text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-lightGradient1 to-lightGradient2 gradient-text">
+              ハッカソンについて
+            </h2>
+            <!-- <p class="text-xl mb-4">共催: 東京大学本郷テックガレージ</p>
+              <p class="text-xl mb-4">
+                協賛: 東京大学情報学環中山未来ファクトリー
+              </p> -->
+            <h2 class="text-xl mb-4">場所: 東京大学情報学環オープンスタジオ<h2>
+                <h2 class="text-xl mb-4">日時: 2023年5月6日-7日</h2>
+                <h2 class="text-xl mb-4">参加者: 25人（増枠の可能性あり）</h2>
+                <!-- <p class="text-xl mb-4">
+                  ChatGPTとAIに焦点を当てた2日間の刺激的なハッカソンで切磋琢磨しましょう！
+                </p> -->
+          </div>
         </div>
       </div>
-      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
-    </nav>
-    <!--Hero-->
-    <div class="pt-24">
-      <div
-        class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center"
-      >
-        <!--Left Col-->
-        <div
-          class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left"
-        >
-          <p class="uppercase tracking-loose w-full text-white">
-            ChatGPTハッカソン in 東京
-          </p>
-          <h1 class="my-4 text-5xl font-bold leading-tight gradient-text">
-            Unleash the Power of AI in Your Projects
-          </h1>
-          <p class="leading-normal text-2xl text-white mb-8">
-            Join us for an exciting hackathon event to explore the possibilities
-            of ChatGPT and create innovative solutions.
-          </p>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <button
-              class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-            >
-              Sign Up
-            </button>
+      </div>
+    </section>
+
+    <!-- Schedule -->
+    <section id="schedule" class="py-12 bg-primary-bg">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h2 class="text-4xl font-bold mb-8 gradient-text">スケジュール</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Day 1 -->
+          <div class="schedule-card">
+            <h3 class="text-2xl font-semibold mb-6">
+              <i class="fas fa-calendar-day icon"></i>
+              1日目（5月6日土曜日）
+            </h3>
+            <div class="mb-6 text-2xl">
+              <h4>■ Kick Off 9:30~12:00</h4>
+              <ul class="list-disc list-inside">
+                <li>開会式・イベント説明</li>
+                <li>メンター講義・ワークショップ（※調整中）</li>
+                <li>チーム発表・チーム内でのテーマ決め</li>
+              </ul>
+            </div>
+            <div class="mb-6 text-2xl">
+              <h4>■Build Time 13:00~18:00</h4>
+            </div>
+          </div>
+<!-- Day 2 -->
+<div class="schedule-card">
+  <h3 class="text-2xl font-semibold mb-6">
+    <i class="fas fa-calendar-day icon"></i>
+    2日目（5月7日日曜日）
+  </h3>
+  <div class="mb-6 text-2xl">
+    <h4>■ Build Time 9:30~12:00</h4>
+  </div>
+  <div class="mb-6 text-2xl">
+    <h4>■ Wrap Up 13:00~18:00</h4>
+    <ul class="list-disc list-inside">
+      <li>開発仕上げ</li>
+      <li>最終プレゼン</li>
+      <li>投票・表彰・閉会式</li>
+    </ul>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentors & Speakers -->
+    <section id="mentors" class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold gradient-text">運営メンバー</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Mentor / Speaker Card -->
+          <div class="text-center">
+            <div class="relative w-48 h-48 mx-auto mb-4">
+              <img src="./images/masahiro_yamagata_heads.JPG" alt="Mentor"
+                class="rounded-full w-48 h-48 absolute top-0 left-0 mentor-image" />
+              <img src="./images/masahiro_yamagata_heads.JPG" alt="Mentor Hover"
+                class="rounded-full w-48 h-48 absolute top-0 left-0 mentor-image-hover hidden" />
+            </div>
+            <h2 class="text-xl font-bold">山形 昌弘</h2>
+            <p>東京大学大学院 修士2年</p>
+          </div>
+          <div class="text-center">
+            <div class="relative w-48 h-48 mx-auto mb-4">
+              <img src="./images/atom_scott_heads.png" alt="Mentor"
+                class="rounded-full w-48 h-48 absolute top-0 left-0 mentor-image" />
+              <img src="./images/atom_scott_tails.png" alt="Mentor Hover"
+                class="rounded-full w-48 h-48 absolute top-0 left-0 mentor-image-hover hidden" />
+            </div>
+            <h2 class="text-xl font-bold">スコット アトム</h2>
+            <p>名古屋大学大学院 博士1年</p>
+          </div>
+          <!-- Add more mentor/speaker cards as needed -->
+        </div>
+      </div>
+    </section>
+    <!-- Location -->
+    <section id="location" class="py-12 bg-gradient-to-b from-transparent to-black">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left">
+          <!-- Left column - Location -->
+          <div class="text-white">
+            <h2 class="text-4xl font-bold mb-8 gradient-text">Location</h2>
+            <p class="text-xl">Tokyo University</p>
+            <p class="text-xl">7-3-1 Hongo, Bunkyo City</p>
+            <p class="text-xl">Tokyo 113-8654, Japan</p>
+          </div>
+          <!-- Right column - Google Maps Embed -->
+          <div class="w-full h-64 relative aspect-w-16 aspect-h-9">
+            <iframe class="absolute top-0 left-0 w-full h-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.471453041328!2d139.7592052655189!3d35.7146221801865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c2ffa206ea3%3A0x30e407498313ba95!2sThe%20University%20of%20Tokyo!5e0!3m2!1sen!2smy!4v1680657354491!5m2!1sen!2smy"
+              width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--Footer-->
+  <footer class="w-full border-t border-gray-400 py-8">
+    <div class="container mx-auto px-8">
+      <div class="w-full flex flex-col md:flex-row py-6">
+        <div class="flex-1 mb-6 md:mb-0">
+          <a class="text-3xl font-bold mb-2 gradient-text" href="#">
+            ChatGPTハッカソン
           </a>
-          <p class="text-white mt-4">
-            Only
-            <span id="countdown" class="font-bold">00 days 00:00:00</span> left
-            until registration closes!
+          <p class="mb-4 text-gray-800" style="color: var(--footer-text)">
+            A hackathon event focusing on the creative use of ChatGPT
+            technology in various projects.
+          </p>
+          <p class="text-gray-800" style="color: var(--footer-text)">
+            &copy; 2023 ChatGPT Hackathon. All rights reserved.
           </p>
         </div>
-        <!--Right Col-->
-        <div class="w-full md:w-3/5 py-6 text-center">
-          <img
-            class="w-full md:w-4/5 mx-auto z-50"
-            src="./images/hero.png"
-            alt="ChatGPT Hackathon"
-          />
+        <div class="flex-1">
+          <p class="uppercase text-gray-800 font-bold mb-2 gradient-text">
+            Useful Links
+          </p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2">
+              <a href="#about" class="text-gray-800 hover:text-gray-900 gradient-text-link">
+                About
+              </a>
+            </li>
+            <li class="mt-2">
+              <a href="#schedule" class="text-gray-800 hover:text-gray-900 gradient-text-link">
+                Schedule
+              </a>
+            </li>
+            <li class="mt-2">
+              <a href="#mentors" class="text-gray-800 hover:text-gray-900 gradient-text-link">
+                Mentors
+              </a>
+            </li>
+            <li class="mt-2">
+              <a href="#location" class="text-gray-800 hover:text-gray-900 gradient-text-link">
+                Location
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-    <main class="container mx-auto">
-      <!-- About the Hackathon -->
-      <section id="about" class="relative bg-cover bg-center py-12">
-        <div class="absolute inset-0"></div>
-        <div class="container mx-auto px-4">
-          <div
-            class="relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left"
-          >
-            <!-- Left column - Image -->
-            <div class="w-full h-64 md:h-auto">
-              <img
-                class="w-full h-full object-cover object-center"
-                src="./images/about-1.png"
-                alt="About the Hackathon Image"
-              />
-            </div>
+  </footer>
+</body>
 
-            <!-- Right column - Details -->
-            <div class="text-white">
-              <h2
-                class="text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-lightGradient1 to-lightGradient2 gradient-text"
-              >
-                About the Hackathon
-              </h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                <div class="flex items-center">
-                  <i class="fas fa-calendar text-2xl mr-4"></i>
-                  <p class="text-xl">June 17-18, 2023</p>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-map-marker-alt text-2xl mr-4"></i>
-                  <p class="text-xl">Tokyo, Japan</p>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-users text-2xl mr-4"></i>
-                  <p class="text-xl">100+ Participants</p>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-trophy text-2xl mr-4"></i>
-                  <p class="text-xl">Exciting Prizes</p>
-                </div>
-              </div>
-
-              <p class="text-lg mb-4">
-                Join us for an exciting two-day hackathon focused on ChatGPT and
-                AI. Collaborate with fellow developers, designers, and data
-                scientists to create innovative projects and compete for amazing
-                prizes!
-              </p>
-              <button
-                class="bg-white text-purple-900 font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-              >
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Schedule -->
-      <section id="schedule" class="py-12">
-        <div class="container mx-auto px-4">
-          <div class="text-center">
-            <h2 class="text-4xl font-bold mb-8 gradient-text">Schedule</h2>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Day 1 -->
-            <div>
-              <h3 class="text-2xl font-semibold mb-4">Day 1</h3>
-              <table class="w-full table-fixed text-left gradient-border">
-                <tbody>
-                  <tr>
-                    <td class="py-2">9:00-9:30</td>
-                    <td>受付</td>
-                  </tr>
-                  <tr>
-                    <td class="py-2">9:30-10:00</td>
-                    <td>開会式・イベント説明</td>
-                  </tr>
-                  <tr>
-                    <td class="py-2">10:00-11:00</td>
-                    <td>
-                      講義: ChatGPTを活用したアプリケーションの事例について
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="py-2">11:00-12:00</td>
-                    <td>アイデア出し、チーム編成</td>
-                  </tr>
-                  <tr>
-                    <td class="py-2">12:00-13:00</td>
-                    <td>昼休憩</td>
-                  </tr>
-                  <tr>
-                    <td class="py-2">13:00-</td>
-                    <td>開発 (終了時間無し、エンドレス)</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <!-- Day 2 -->
-            <div>
-              <h3 class="text-2xl font-semibold mb-4">Day 2</h3>
-              <table class="w-full table-fixed text-left gradient-border">
-                <tbody>
-                  <tr>
-                    <td class="py-2">9:00-9:30</td>
-                    <td>開場</td>
-                  </tr>
-                  <tr>
-                    <td class="py-2">9:30-12:30</td>
-                    <td>開発</td>
-                  </tr>
-                  <tr>
-                    <td class="py-2">12:30-13:30</td>
-                    <td>昼休憩</td>
-                  </tr>
-                  <tr>
-                    <td class="py-2">13:30-16:00</td>
-                    <td>開発</td>
-                  </tr>
-                  <tr>
-                    <td class="py-2">16:00-17:30</td>
-                    <td>最終プレゼンテーション: 各チームのプロジェクト紹介</td>
-                  </tr>
-                  <tr>
-                    <td class="py-2">17:30-18:00</td>
-                    <td>審査・表彰・閉会式</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Mentors & Speakers -->
-      <section id="mentors" class="py-12">
-        <div class="container mx-auto px-4">
-          <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold gradient-text">Meet The Team</h2>
-            <p class="text-xl mt-4">
-              Meet our lineup of industry experts and thought leaders
-            </p>
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Mentor / Speaker Card -->
-            <div class="text-center">
-              <div class="relative w-48 h-48 mx-auto mb-4">
-                <img
-                  src="./images/atom_scott_heads.png"
-                  alt="Mentor"
-                  class="rounded-full w-48 h-48 absolute top-0 left-0 mentor-image"
-                />
-                <img
-                  src="./images/atom_scott_tails.png"
-                  alt="Mentor Hover"
-                  class="rounded-full w-48 h-48 absolute top-0 left-0 mentor-image-hover hidden"
-                />
-              </div>
-              <h3 class="text-xl font-bold">Atom Scott</h3>
-              <p>Mentor Title</p>
-            </div>
-            <!-- Add more mentor/speaker cards as needed -->
-            <!-- Repeat the mentor/speaker card for a total of six cards -->
-            <div class="text-center">
-              <!-- ... -->
-            </div>
-            <div class="text-center">
-              <!-- ... -->
-            </div>
-            <div class="text-center">
-              <!-- ... -->
-            </div>
-            <div class="text-center">
-              <!-- ... -->
-            </div>
-            <div class="text-center">
-              <!-- ... -->
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Location -->
-      <section
-        id="location"
-        class="py-12 bg-gradient-to-b from-transparent to-black"
-      >
-        <div class="container mx-auto px-4">
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left"
-          >
-            <!-- Left column - Location -->
-            <div class="text-white">
-              <h2 class="text-4xl font-bold mb-8 gradient-text">Location</h2>
-              <p class="text-xl">Tokyo University</p>
-              <p class="text-xl">7-3-1 Hongo, Bunkyo City</p>
-              <p class="text-xl">Tokyo 113-8654, Japan</p>
-            </div>
-            <!-- Right column - Google Maps Embed -->
-            <div class="w-full h-64 md:h-auto relative">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.471453041328!2d139.7592052655189!3d35.7146221801865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c2ffa206ea3%3A0x30e407498313ba95!2sThe%20University%20of%20Tokyo!5e0!3m2!1sen!2smy!4v1680657354491!5m2!1sen!2smy"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!--Footer-->
-    <footer class="w-full border-t border-gray-400 py-8">
-      <div class="container mx-auto px-8">
-        <div class="w-full flex flex-col md:flex-row py-6">
-          <div class="flex-1 mb-6 md:mb-0">
-            <a class="text-3xl font-bold mb-2 gradient-text" href="#">
-              ChatGPTハッカソン
-            </a>
-            <p class="mb-4 text-gray-800" style="color: var(--footer-text)">
-              A hackathon event focusing on the creative use of ChatGPT
-              technology in various projects.
-            </p>
-            <p class="text-gray-800" style="color: var(--footer-text)">
-              &copy; 2023 ChatGPT Hackathon. All rights reserved.
-            </p>
-          </div>
-          <div class="flex-1">
-            <p class="uppercase text-gray-800 font-bold mb-2 gradient-text">
-              Useful Links
-            </p>
-            <ul class="list-reset mb-6">
-              <li class="mt-2">
-                <a
-                  href="#about"
-                  class="text-gray-800 hover:text-gray-900 gradient-text-link"
-                >
-                  About
-                </a>
-              </li>
-              <li class="mt-2">
-                <a
-                  href="#schedule"
-                  class="text-gray-800 hover:text-gray-900 gradient-text-link"
-                >
-                  Schedule
-                </a>
-              </li>
-              <li class="mt-2">
-                <a
-                  href="#mentors"
-                  class="text-gray-800 hover:text-gray-900 gradient-text-link"
-                >
-                  Mentors
-                </a>
-              </li>
-              <li class="mt-2">
-                <a
-                  href="#location"
-                  class="text-gray-800 hover:text-gray-900 gradient-text-link"
-                >
-                  Location
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      AOS.init();
-    </script>
-    <script>
-      const swiper = new Swiper(".swiper-container", {
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        autoplay: {
-          delay: 3000,
-        },
-        loop: true,
-      });
-    </script>
-    <script>
-      const countdownElement = document.getElementById("countdown");
-      const deadline = new Date("2023-05-02T00:00:00"); // Set your deadline date here
-
-      function updateCountdown() {
-        const now = new Date();
-        const remainingTime = deadline - now;
-
-        if (remainingTime <= 0) {
-          countdownElement.innerHTML = "00 days 00:00:00";
-        } else {
-          const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-          const hours = Math.floor(
-            (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          );
-          const minutes = Math.floor(
-            (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-          );
-          const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-
-          countdownElement.innerHTML = `${days} days ${hours
-            .toString()
-            .padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds
-            .toString()
-            .padStart(2, "0")}`;
-        }
-      }
-
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    </script>
-  </body>
 </html>
