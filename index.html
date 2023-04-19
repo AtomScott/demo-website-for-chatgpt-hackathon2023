@@ -13,14 +13,20 @@
     />
     <meta name="author" content="HackGPT Tokyo" />
 
+    
+
+
+
+
+
     <!-- Open Graph Protocol Tags -->
     <meta
       property="og:title"
-      content="HackGPT Tokyo - ChatGPTで素晴らしいアプリケーションを作成しよう"
+      content="HackGPT Tokyo - ChatGPTを使って、オリジナルのAIシステムを作ろう！"
     />
     <meta
       property="og:description"
-      content="HackGPT TokyoでChatGPTを使ってすばらしいアプリケーションを作成しましょう！学生向けのハッカソンで新しい技術を学び、チームで協力してプロジェクトを完成させます。"
+      content="世界中で、ChatGPTを活用したシステムが次々と生まれています。あなたのアイディアと、ChatGPTの能力を組み合わせて、オリジナルのAIシステムを作りませんか？検索システム、チャットボット、ゲーム、アート作品――あらゆるアイデアを大歓迎します。熱い参加者達と、プログラミング経験豊富なメンターと一緒に、ガンガン開発しよう！さらに、開発に必要なChatGPTのAPIを提供します！(使用量に上限があります)。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hackgpt.tokyo" />
@@ -34,11 +40,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="HackGPT Tokyo - ChatGPTで素晴らしいアプリケーションを作成しよう"
+      content="HackGPT Tokyo - ChatGPTを使って、オリジナルのAIシステムを作ろう！"
     />
     <meta
       name="twitter:description"
-      content="HackGPT TokyoでChatGPTを使ってすばらしいアプリケーションを作成しましょう！学生向けのハッカソンで新しい技術を学び、チームで協力してプロジェクトを完成させます。"
+      content="世界中で、ChatGPTを活用したシステムが次々と生まれています。あなたのアイディアと、ChatGPTの能力を組み合わせて、オリジナルのAIシステムを作りませんか？検索システム、チャットボット、ゲーム、アート作品――あらゆるアイデアを大歓迎します。熱い参加者達と、プログラミング経験豊富なメンターと一緒に、ガンガン開発しよう！さらに、開発に必要なChatGPTのAPIを提供します！(使用量に上限があります)"
     />
     <meta
       name="twitter:image"
@@ -295,6 +301,36 @@
         </div>
       </div>
     </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h2 class="text-4xl font-bold mb-8 gradient-text">お問い合わせフォーム</h2>
+        </div>
+        <div class="w-full max-w-lg mx-auto">
+          <form action="https://formspree.io/f/xjvdjkjd" method="POST">
+            <input type="hidden" name="_subject" value="お問い合わせ">
+            <div class="mb-6">
+              <label class="block text-lg mb-2" for="name">お名前</label>
+              <input class="w-full px-3 py-2 border rounded-lg text-gray-900" type="text" id="name" name="name" required>
+            </div>
+            <div class="mb-6">
+              <label class="block text-lg mb-2" for="_replyto">メールアドレス</label>
+              <input class="w-full px-3 py-2 border rounded-lg text-gray-900" type="email" id="_replyto" name="_replyto" required>
+            </div>
+            <div class="mb-6">
+              <label class="block text-lg mb-2" for="message">お問い合わせ内容</label>
+              <textarea class="w-full px-3 py-2 border rounded-lg text-gray-900" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="text-center">
+              <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg" type="submit">送信</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    
   </main>
   <!--Footer-->
   <footer class="w-full border-t border-gray-400 py-8">
@@ -305,8 +341,7 @@
             ChatGPTハッカソン
           </a>
           <p class="mb-4 text-gray-800" style="color: var(--footer-text)">
-            A hackathon event focusing on the creative use of ChatGPT
-            technology in various projects.
+            ChatGPTを使って、オリジナルのAIシステムを作ろう！
           </p>
           <p class="text-gray-800" style="color: var(--footer-text)">
             &copy; 2023 ChatGPT Hackathon. All rights reserved.
