@@ -13,7 +13,7 @@ const countdownElement = document.getElementById("countdown");
 // The reason for setting the time to 16:30:00Z is that Tokyo is 9 hours ahead of Coordinated Universal Time (UTC), 
 // so when it is 9:30 AM in Tokyo, it is 0:30 AM UTC. 
 // Therefore, you need to subtract 9 hours from 9:30 AM to convert it to UTC time, which is 16:30:00 on the previous day, May 5th.
-const deadline = new Date("2023-05-05T16:30:00Z"); // Set your deadline date here
+const deadline = new Date("2023-04-30T15:00:00Z"); // Set your deadline date here
 
 function updateCountdown() {
   const now = new Date();
