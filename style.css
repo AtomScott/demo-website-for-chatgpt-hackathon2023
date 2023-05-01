@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+
+
 
 :root {
   --primary-bg: #3b620e;
@@ -158,6 +161,7 @@
 
 
 body {
+  font-family: "Noto Sans JP", sans-serif;
   background: linear-gradient(to bottom, var(--fade-from-color), var(--fade-mid-color), var(--fade-to-color));
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -177,6 +181,14 @@ table {
 }
 
 .mentor-image-hover:hover {
+  display: block;
+}
+
+.mentor-card {
+  position: relative;
+}
+
+.mentor-card:hover .mentor-card-description {
   display: block;
 }
 
@@ -216,4 +228,34 @@ table {
 .schedule-card ul {
   font-size: 0.9rem;
   font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DotGothic16", sans-serif;
+}
+
+summary {
+  list-style: none;
+  outline: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] > summary > span {
+  transform: rotate(90deg);
+  transition: transform 0.3s;
+}
+
+.modal {
+  transition: opacity 0.25s ease;
+}
+.modal-open {
+  overflow: hidden;
+}
+.modal-open .modal {
+  opacity: 1;
+  pointer-events: auto;
 }

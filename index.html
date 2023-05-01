@@ -1,69 +1,59 @@
+---
+layout: null
+---
+
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JQK3M4SPBG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQK3M4SPBG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-JQK3M4SPBG');
-</script>
-  
+    gtag('config', 'G-JQK3M4SPBG');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="ChatGPTを活用したシステムを作ろう！オリジナルのAIペットを作るワークショップ付き"
-  />
-  <meta name="keywords" content="ChatGPT, HackGPT, 東京, ハッカソン, AI, アプリケーション, 学生" />
-  <meta name="author" content="HackGPT Tokyo" />
-
-
-
-
-
-
+  <meta name="description" content="{{ site.description }}" />
+  <meta name="keywords" content="{{ site.keywords }}" />
+  <meta name="author" content="{{ site.author }}" />
 
   <!-- Open Graph Protocol Tags -->
-  <meta property="og:title" content="HackGPT Tokyo - ChatGPTを活用したシステムを作ろう！" />
-  <meta property="og:description"
-    content="ChatGPTを活用したシステムを作ろう！オリジナルのAIペットを作るワークショップ付き"
-  />
+  <meta property="og:title" content="{{ site.title }} - {{ site.description }}" />
+  <meta property="og:description" content="{{ site.description }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hackgpt.tokyo" />
-  <meta property="og:image" content="https://hackgpt.tokyo/images/ogp.png" />
-  <meta property="og:site_name" content="HackGPT Tokyo" />
+  <meta property="og:image" content="https://hackgpt.tokyo{{ site.banner }}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
 
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="HackGPT Tokyo - ChatGPTを使って、オリジナルのAIシステムを作ろう！" />
-  <meta name="twitter:description"
-    content="ChatGPTを活用したシステムを作ろう！オリジナルのAIペットを作るワークショップ付き"
-  />
-  <meta name="twitter:image" content="https://hackgpt.tokyo/images/ogp.png" />
-  <meta name="twitter:creator" content="@your_twitter_handle" />
+  <meta name="twitter:title" content="{{ site.title }} - {{ site.description }}" />
+  <meta name="twitter:description" content="{{ site.description }}" />
+  <meta name="twitter:image" content="https://hackgpt.tokyo{{ site.banner }}" />
 
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v3.0.6/dist/cdn.min.js" defer></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5w2p5z+8zr5d5f1J5U6Ixt4j8U2Q4U+9cuEnJoa3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <title>HackGPT Tokyo</title>
-  <link rel="stylesheet" href="styles.css" />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" /> -->
+
+  <title>{{site.title}}</title>
+
+  <link rel="stylesheet" href="{{site.url}}/style.css" />
 </head>
 
 <body class="bg-gray-100 text-white">
@@ -83,15 +73,16 @@
       <div class="block lg:hidden pr-4">
         <button id="nav-toggle"
           class="flex items-center p-1 text-white focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-          <svg class="fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <svg class="fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20brew install chruby ruby-install xz
+ 20">
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </button>
       </div>
       <div
-  class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-black lg:bg-transparent text-white p-4 lg:p-0 z-20"
-  id="nav-content">
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-black lg:bg-transparent text-white p-4 lg:p-0 z-20"
+        id="nav-content">
 
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
           <li class="mr-3">
@@ -121,6 +112,7 @@
     </div>
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
   </nav>
+
   <!--Hero-->
   <div class="pt-24">
     <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
@@ -135,7 +127,7 @@
         <h2 class="leading-normal text-xl text-white mb-4">開催日：2023年5月6日-7日</h2>
         <h2 class="leading-normal text-xl text-white mb-4">応募締切：4/30(日)</h2>
         <h2 class="leading-normal text-xl text-white mb-4">残り <span id="countdown" class="font-bold">00日
-          00:00:00</span></h2>
+            00:00:00</span></h2>
         <h3 class="leading-normal text-white mb-4">※このサイトもChatGPTに作ってもらいました。</h3>
         <a href="https://forms.gle/wnfHB73zhauwESWz8" target="_blank" rel="noopener noreferrer">
           <button
@@ -182,41 +174,41 @@
       </div>
       </div>
     </section>
-  
+
     <section id="about" class="py-12">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <!-- Left column - Image -->
           <div class="w-full h-auto">
-            <span class="text-center" style="text-align: center;">楽しく学べるハンズオン<br>「話せるAIペットを作ろう！」のイメージ</span>
             <div class="grid grid-cols-2 gap-2 md:gap-4">
-              <img class="w-full h-auto object-cover" src="images/chatting_dog_m.png">
+              <img class="w-full h-auto object-cover" src="{{site.url}}/images/chatting_dog_m.png">
               <img class="w-full h-auto object-cover" src="images/chatting_dog_f.png">
               <img class="w-full h-auto object-cover" src="images/dog_in_PC.png">
               <img class="w-full h-auto object-cover" src="images/dog_character.png">
             </div>
           </div>
-    
+
           <!-- Right column - Details -->
           <div>
-            <h2 class="text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-lightGradient1 to-lightGradient2 gradient-text">
-              得られるもの
+            <h2
+              class="text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-lightGradient1 to-lightGradient2 gradient-text">
+              参加のメリット
             </h2>
             <h3 class="text-2xl mb-6">ChatGPTを活用したシステム開発に、楽しく効率的に挑戦できます！</h3>
             <div class="space-y-2">
               <ul class="list-disc list-inside">
-                <li>プロンプトエンジニアリングとChatGPT活用事例の講義による、効率的なインプット</li>
-                <li>楽しく学べる、「話せるAIペット」作成ハンズオン</li>
+                <li>効率的なプロンプトエンジニアリングとChatGPT活用事例の講義</li>
+                <li>楽しい話せるAIペット作成ハンズオン</li>
                 <li>チームでの協力・切磋琢磨</li>
                 <li>最大1000ドルのChatGPT API利用料サポート</li>
                 <li>メンターによるプログラミングとプロンプトのサポート</li>
               </ul>
             </div>
-                      </div>
+          </div>
         </div>
       </div>
     </section>
-                    
+
     <!-- Schedule -->
     <section id="schedule" class="py-12 bg-primary-bg">
       <div class="container mx-auto px-4">
@@ -283,31 +275,65 @@
           <h2 class="text-4xl font-bold gradient-text">運営メンバー</h2>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {% for person in site.people %}
           <!-- Mentor / Speaker Card -->
           <div class="text-center">
             <div class="relative w-48 h-48 mx-auto mb-4">
-              <img src="./images/atom_scott_heads.png" alt="Mentor"
+              <img src="{{ 'images/' | append: person.image }}" alt="{{ person.name }}"
                 class="rounded-full w-48 h-48 absolute top-0 left-0 mentor-image" />
-              <img src="./images/atom_scott_tails.png" alt="Mentor Hover"
+              <img src="{{ 'images/' | append: person.image_hover }}" alt="{{ person.name }} Hover"
                 class="rounded-full w-48 h-48 absolute top-0 left-0 mentor-image-hover hidden" />
             </div>
-            <h2 class="text-xl font-bold">スコット アトム</h2>
-            <p>名古屋大学大学院 博士1年</p>
-          </div>
-          <div class="text-center">
-            <div class="relative w-48 h-48 mx-auto mb-4">
-              <img src="./images/masahiro_yamagata_heads.JPG" alt="Mentor"
-                class="rounded-full w-48 h-48 absolute top-0 left-0 mentor-image" />
-              <img src="./images/masahiro_yamagata_heads.JPG" alt="Mentor Hover"
-                class="rounded-full w-48 h-48 absolute top-0 left-0 mentor-image-hover hidden" />
+            <h2 class="text-xl font-bold">{{ person.name }}</h2>
+            <p>{{ person.affiliation }}</p>
+            <div class="mt-2">
+              {% if person.twitter %}
+                <a href="{{ person.twitter }}" target="_blank" class="text-white mx-1">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              {% endif %}
+              {% if person.github %}
+                <a href="{{ person.github }}" target="_blank" class="text-white mx-1">
+                  <i class="fab fa-github"></i>
+                </a>
+              {% endif %}
+              {% if person.website %}
+                <a href="{{ person.website }}" target="_blank" class="text-white mx-1">
+                  <i class="fas fa-globe"></i>
+                </a>
+              {% endif %}
             </div>
-            <h2 class="text-xl font-bold">山形 昌弘</h2>
-            <p>東京大学大学院 修士2年</p>
+                        <button data-modal-id="modal-{{ forloop.index }}" class="openModal text-blue-500">
+              プロフィール詳細
+            </button>
+
+
+            <div id="modal-{{ forloop.index }}"
+            class="modal fixed inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 cursor-pointer opacity-0 pointer-events-none z-50">
+            <div class="bg-black p-8 rounded-lg shadow-lg w-full md:w-3/4 mx-auto">
+              <div class="flex flex-col md:flex-row items-center">
+                <div class="bg-black md:w-1/2 mb-4 md:mb-0">
+                  <img src="{{ 'images/' | append: person.image }}" alt="{{ person.name }}"
+                    class="rounded-full w-48 h-48 mx-auto" />
+                </div>
+                <div class="md:w-1/2 md:pl-4">
+                  <h2 class="text-2xl font-bold mb-4">{{ person.name }} - プロフィール詳細</h2>
+                  <p>{{ person.affiliation }}</p>
+                  <p>{{ person.bio }}</p>
+                  <button class="closeModal mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    閉じる
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Add more mentor/speaker cards as needed -->
+          
+          </div>
+          {% endfor %}
         </div>
       </div>
     </section>
+
     <!-- Location -->
     <section id="location" class="py-12 bg-gradient-to-b from-transparent to-black">
       <div class="container mx-auto px-4">
@@ -318,8 +344,7 @@
             <h2 class="text-xl">〒113-0033 </h2>
             <h2 class="text-xl">東京都文京区本郷7-3-1</h2>
             <h2 class="text-xl">東京大学 本郷キャンパス 情報学環本館地下1階</h2>
-            <a href="https://openstudio-utokyo.com/access/"
-              class="underline" style="color: var(--blue)
+            <a href="https://openstudio-utokyo.com/access/" class="underline" style="color: var(--blue)
               ;">アクセス</a>
           </div>
           <!-- Right column - Google Maps Embed -->
@@ -333,89 +358,89 @@
       </div>
     </section>
 
-<!-- FAQ Section -->
-<section id="faq" class="py-12">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold mb-8 gradient-text">FAQ</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Question 1 -->
-      <div class="border border rounded-lg p-6">
-        <details>
-          <summary class="cursor-pointer text-xl font-bold">
-            参加費は無料ですか？
-            <span class="float-right text-xl">▶</span>
-          </summary>
-          <p class="text-lg mt-4">はい、ハッカソンの参加費は完全無料です。</p>
-        </details>
+    <!-- FAQ Section -->
+    <section id="faq" class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-8 gradient-text">FAQ</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Question 1 -->
+          <div class="border border rounded-lg p-6">
+            <details>
+              <summary class="cursor-pointer text-xl font-bold">
+                参加費は無料ですか？
+                <span class="float-right text-xl">▶</span>
+              </summary>
+              <p class="text-lg mt-4">はい、ハッカソンの参加費は完全無料です。</p>
+            </details>
+          </div>
+          <!-- Question 2 -->
+          <div class="border rounded-lg p-6">
+            <details>
+              <summary class="cursor-pointer text-xl font-bold">
+                一人でも応募可能ですか？
+                <span class="float-right text-xl">▶</span>
+              </summary>
+              <p class="text-lg mt-4">はい、一人で応募していただけます！当日は、運営で組んだ４名ほどのチームで開発に取り組んでいただきます。チーム決めは、参加者の作りたいものなどを考慮して行います。
+            </details>
+          </div>
+          <div class="border rounded-lg p-6">
+            <details>
+              <summary class="cursor-pointer text-xl font-bold">
+                チームで応募可能ですか？
+                <span class="float-right text-xl">▶</span>
+              </summary>
+              <p class="text-lg mt-4">はい、チームで応募していただけます！応募フォームに、チーム名の記入をお願いします。
+            </details>
+          </div>
+          <!-- Question 3 -->
+          <div class="border rounded-lg p-6">
+            <details>
+              <summary class="cursor-pointer text-xl font-bold">
+                現地参加は必須ですか？
+                <span class="float-right text-xl">▶</span>
+              </summary>
+              <p class="text-lg mt-4">はい、現地での参加を必須としています。</p>
+            </details>
+          </div>
+          <!-- Question 4 -->
+          <div class="border rounded-lg p-6">
+            <details>
+              <summary class="cursor-pointer text-xl font-bold">
+                ハッカソンに参加するメリットはなんですか？
+                <span class="float-right text-xl">▶</span>
+              </summary>
+              <p class="text-lg mt-4">
+                ChatGPTを活用したシステムの開発に、楽しく効率的に挑戦できる環境を用意しています。<br>
+                <br>1.プロンプトエンジニアリングやChatGPT活用事例を、講義で効率的にインプットできます。
+                <br>2.話せるAIペットを作るハンズオンで、ChatGPT APIの使い方を楽しく学習できます。
+                <br>3.チームメイトと協力・切磋琢磨しながら開発できます。
+                <br>4.ChatGPTのAPI利用料を、総額1000$までサポートします。
+                <br>5.メンターによる、プログラミングとプロンプトのサポートを受けられます。
+              </p>
+            </details>
+          </div>
+          <div class="border rounded-lg p-6">
+            <details>
+              <summary class="cursor-pointer text-xl font-bold">
+                社会人も参加可能ですか？
+                <span class="float-right text-xl">▶</span>
+              </summary>
+              <p class="text-lg mt-4">申しわけありませんが、社会人の方は参加できません。会場の都合上、今回のハッカソンは大学生及び大学院生のみとさせていただきます。
+              </p>
+            </details>
+          </div>
+        </div>
       </div>
-      <!-- Question 2 -->
-      <div class="border rounded-lg p-6">
-        <details>
-          <summary class="cursor-pointer text-xl font-bold">
-            一人でも応募可能ですか？
-            <span class="float-right text-xl">▶</span>
-          </summary>
-          <p class="text-lg mt-4">はい、一人で応募していただけます！当日は、運営で組んだ４名ほどのチームで開発に取り組んでいただきます。チーム決めは、参加者の作りたいものなどを考慮して行います。
-        </details>
-      </div>
-      <div class="border rounded-lg p-6">
-        <details>
-          <summary class="cursor-pointer text-xl font-bold">
-            チームで応募可能ですか？
-            <span class="float-right text-xl">▶</span>
-          </summary>
-          <p class="text-lg mt-4">はい、チームで応募していただけます！応募フォームに、チーム名の記入をお願いします。
-        </details>
-      </div>
-      <!-- Question 3 -->
-      <div class="border rounded-lg p-6">
-        <details>
-          <summary class="cursor-pointer text-xl font-bold">
-            現地参加は必須ですか？
-            <span class="float-right text-xl">▶</span>
-          </summary>
-          <p class="text-lg mt-4">はい、現地での参加を必須としています。</p>
-        </details>
-      </div>
-      <!-- Question 4 -->
-      <div class="border rounded-lg p-6">
-        <details>
-          <summary class="cursor-pointer text-xl font-bold">
-            ハッカソンに参加するメリットはなんですか？
-            <span class="float-right text-xl">▶</span>
-          </summary>
-          <p class="text-lg mt-4">
-            ChatGPTを活用したシステムの開発に、楽しく効率的に挑戦できる環境を用意しています。<br>
-            <br>1.プロンプトエンジニアリングやChatGPT活用事例を、講義で効率的にインプットできます。
-            <br>2.話せるAIペットを作るハンズオンで、ChatGPT APIの使い方を楽しく学習できます。
-            <br>3.チームメイトと協力・切磋琢磨しながら開発できます。
-            <br>4.ChatGPTのAPI利用料を、総額1000$までサポートします。
-            <br>5.メンターによる、プログラミングとプロンプトのサポートを受けられます。
-          </p>
-        </details>
-      </div>
-      <div class="border rounded-lg p-6">
-        <details>
-          <summary class="cursor-pointer text-xl font-bold">
-            社会人も参加可能ですか？
-            <span class="float-right text-xl">▶</span>
-          </summary>
-          <p class="text-lg mt-4">申しわけありませんが、社会人の方は参加できません。会場の都合上、今回のハッカソンは大学生及び大学院生のみとさせていただきます。
-          </p>
-        </details>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<a href="https://forms.gle/wnfHB73zhauwESWz8" target="_blank" rel="noopener noreferrer">
-  <button
-    class="text-xl mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-    参加登録
-  </button>
-</a>
+    <a href="https://forms.gle/wnfHB73zhauwESWz8" target="_blank" rel="noopener noreferrer">
+      <button
+        class="text-xl mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+        参加登録
+      </button>
+    </a>
 
     <!-- Contact -->
     <section id="contact" class="py-12">
@@ -493,34 +518,7 @@
       </div>
     </div>
   </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const navToggle = document.getElementById('nav-toggle');
-      const navContent = document.getElementById('nav-content');
-      let menuOpen = false;
-  
-      navToggle.addEventListener('click', () => {
-        navContent.classList.toggle('hidden');
-        menuOpen = !menuOpen;
-  
-        // Change the menu icon to a cross when the menu is open
-        if (menuOpen) {
-          navToggle.innerHTML = `
-            <svg class="fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-              <title>Close</title>
-              <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/>
-            </svg>`;
-        } else {
-          navToggle.innerHTML = `
-            <svg class="fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-            </svg>`;
-        }
-      });
-    });
-  </script>
-      
+  <script src="script.js"></script>
 </body>
 
 </html>
