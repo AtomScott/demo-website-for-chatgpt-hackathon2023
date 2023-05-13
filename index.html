@@ -36,7 +36,7 @@ layout: null
   <meta name="twitter:description" content="{{ site.description }}" />
   <meta name="twitter:image" content="https://hackgpt.tokyo{{ site.banner }}" />
 
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
@@ -102,12 +102,12 @@ layout: null
               href="#location">Location</a>
           </li>
         </ul>
-        <a href="https://forms.gle/wnfHB73zhauwESWz8" target="_blank" rel="noopener noreferrer">
+        <!-- <a href="https://forms.gle/wnfHB73zhauwESWz8" target="_blank" rel="noopener noreferrer">
           <button id="navAction"
             class="mx-auto lg:mx-0 hover:underline bg-white hover:text-gray-900 text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out hover:bg-opacity-100">
             参加登録
           </button>
-        </a>
+        </a> -->
       </div>
     </div>
     <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
@@ -124,18 +124,30 @@ layout: null
             <img src="images/banner-logo.png" alt="HackGPT Tokyo" class="logo-image w-full md:hidden" />
           </a>
         </h1>
-        <h2 class="leading-normal text-xl text-white mb-4">開催日：2023年5月6日-7日</h2>
-        <h2 class="leading-normal text-xl text-white mb-4">応募締切：4/30(日)</h2>
-        <h2 class="leading-normal text-xl text-white mb-4">残り <span id="countdown" class="font-bold">00日
+        <h2 class="leading-normal text-xl text-white mb-4 line-through">開催日：2023年5月6日-7日</h2>
+        <h2 class="leading-normal text-xl text-white mb-4 line-through">応募締切：4/30(日)</h2>
+        <h2 class="leading-normal text-xl text-white mb-4 line-through">残り <span id="countdown" class="font-bold">00日
             00:00:00</span></h2>
-        <h3 class="leading-normal text-white mb-4">※このサイトもChatGPTに作ってもらいました。</h3>
-        <a href="https://forms.gle/wnfHB73zhauwESWz8" target="_blank" rel="noopener noreferrer">
+
+        <div class="schedule-card">
+          <h2 class="leading-normal text-xl text-white mb-4 decoration-4">HackGPT Tokyoは無事開催することができました！</h2>
+          <a href="" rel="noopener noreferrer">
+          <h2 class="leading-normal text-xl text-white mb-4 decoration-4">今後の開催はDiscord・メーリスにてご案内します。</h2>
+          <a href="https://discord.gg/UgZSxjTwBX" rel="noopener noreferrer">
+            <button
+              class="text-xl text-white mx-auto lg:mx-0 hover:underline bg-[#7289da] text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              Discordに参加する
+            </button>
+        <a href="https://forms.gle/3jPrPz25EJkg2z7b7" rel="noopener noreferrer">
           <button
-            class="text-xl mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-            参加登録
+            class="text-xl text-white mx-auto lg:mx-0 hover:underline bg-[#DB4437] text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            メーリスに登録する
           </button>
+      </div>
+
         </a>
       </div>
+
       <!--Right Col-->
       <div class="w-full md:w-3/5 py-6 text-center hidden md:block">
         <img class="w-full md:w-4/5 mx-auto z-50" src="./images/hero.png" alt="ChatGPT Hackathon" />
@@ -288,46 +300,47 @@ layout: null
             <p>{{ person.affiliation }}</p>
             <div class="mt-2">
               {% if person.twitter %}
-                <a href="{{ person.twitter }}" target="_blank" class="text-white mx-1">
-                  <i class="fab fa-twitter"></i>
-                </a>
+              <a href="{{ person.twitter }}" target="_blank" class="text-white mx-1">
+                <i class="fab fa-twitter"></i>
+              </a>
               {% endif %}
               {% if person.github %}
-                <a href="{{ person.github }}" target="_blank" class="text-white mx-1">
-                  <i class="fab fa-github"></i>
-                </a>
+              <a href="{{ person.github }}" target="_blank" class="text-white mx-1">
+                <i class="fab fa-github"></i>
+              </a>
               {% endif %}
               {% if person.website %}
-                <a href="{{ person.website }}" target="_blank" class="text-white mx-1">
-                  <i class="fas fa-globe"></i>
-                </a>
+              <a href="{{ person.website }}" target="_blank" class="text-white mx-1">
+                <i class="fas fa-globe"></i>
+              </a>
               {% endif %}
             </div>
-                        <button data-modal-id="modal-{{ forloop.index }}" class="openModal text-blue-500">
+            <button data-modal-id="modal-{{ forloop.index }}" class="openModal text-blue-500">
               プロフィール詳細
             </button>
 
 
             <div id="modal-{{ forloop.index }}"
-            class="modal fixed inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 cursor-pointer opacity-0 pointer-events-none z-50">
-            <div class="bg-black p-8 rounded-lg shadow-lg w-full md:w-3/4 mx-auto">
-              <div class="flex flex-col md:flex-row items-center">
-                <div class="bg-black md:w-1/2 mb-4 md:mb-0">
-                  <img src="{{ 'images/' | append: person.image }}" alt="{{ person.name }}"
-                    class="rounded-full w-48 h-48 mx-auto" />
-                </div>
-                <div class="md:w-1/2 md:pl-4">
-                  <h2 class="text-2xl font-bold mb-4">{{ person.name }} - プロフィール詳細</h2>
-                  <p>{{ person.affiliation }}</p>
-                  <p>{{ person.bio }}</p>
-                  <button class="closeModal mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    閉じる
-                  </button>
+              class="modal fixed inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50 cursor-pointer opacity-0 pointer-events-none z-50">
+              <div class="bg-black p-8 rounded-lg shadow-lg w-full md:w-3/4 mx-auto">
+                <div class="flex flex-col md:flex-row items-center">
+                  <div class="bg-black md:w-1/2 mb-4 md:mb-0">
+                    <img src="{{ 'images/' | append: person.image }}" alt="{{ person.name }}"
+                      class="rounded-full w-48 h-48 mx-auto" />
+                  </div>
+                  <div class="md:w-1/2 md:pl-4">
+                    <h2 class="text-2xl font-bold mb-4">{{ person.name }} - プロフィール詳細</h2>
+                    <p>{{ person.affiliation }}</p>
+                    <p>{{ person.bio }}</p>
+                    <button
+                      class="closeModal mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                      閉じる
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          
+
           </div>
           {% endfor %}
         </div>
